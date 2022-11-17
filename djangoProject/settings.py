@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-@$8%797u%**1gmo^9nh-xci9_&si72^so)*2v4xw5a$yzeud#b
 DEBUG = True
 
 ALLOWED_HOSTS = ['game.cusat.me']
-CSRF_TRUSTED_ORIGINS = ['game.cusat.me']
+CSRF_TRUSTED_ORIGINS = ['https://game.cusat.me']
 
 # Application definition
 
