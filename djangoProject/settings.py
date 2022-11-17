@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-@$8%797u%**1gmo^9nh-xci9_&si72^so)*2v4xw5a$yzeud#b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['game.cusat.me']
 
 
 # Application definition
