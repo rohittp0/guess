@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game</title>
+</head>
+<body>
+{% block content %}
+
+    {% if started and not ended %}
+        <h1>Game</h1>
+        <p>You and all your co-players are assigned a random ID in the range 1 to {{ players }}</p>
+        <p>Sum of all ids except yours is : {{ total }}</p>
+        <p>Guess your ID</p>
+        <form action="/guess" method="get">
+            <label for="guess">Your ID</label>
+            <input type="text" name="guess" id="guess">
+            <input type="submit" value="Submit">
+        </form>
+    {% elif not ended %}
+        <h1>Game</h1>
+        <h3>Player Registered</h3>
+        <p>Please wait... The game has not started yet.</p>
+    {% endif %}
+
+    {% if ended and not started %}
+        <h1>Game Ended</h1>
+        <h3>Sorry, please wait for the next game</h3>
+    {% endif %}
+
+{% endblock %}
+</body>
+</html>

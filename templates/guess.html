@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game</title>
+</head>
+<body>
+{% block content %}
+    {% if winner %}
+        <h3>Winner</h3>
+        <p>Congratulations! You have won the game.</p>
+    {% else %}
+        <h3>Game Over</h3>
+        <p>Sorry! You have lost the game.</p>
+    {% endif %}
+{% endblock %}
+</body>
+</html>
